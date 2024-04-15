@@ -1,0 +1,89 @@
+/* Logg inn side */
+.logginn{
+    position: relative;
+    width: 650px;
+    height: 900px;
+}
+
+.logginnbox {
+  position: absolute;
+  padding: 50px 50px;
+  background: #fff;
+  border-radius: 10px;
+  top: 20%;
+  left: 85%;
+}
+.logginnbox h1 {
+  font-size: 2em;
+  border-left: 5px solid orange;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.logginnbox .inputbox {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 25px;
+
+}
+.logginnbox .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.logginnbox .inputbox:last-child {
+  margin-bottom: 0;
+}
+
+.logginnbox .inputbox span {
+    position: absolute;
+    top: 43px;
+    left: 10px;
+    color: red;
+}
+
+.logginnbox .inputbox label {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.logginnbox .inputbox button{
+position: absolute;
+  width: 50%;
+  height: 65%;
+  background: orange;
+  color: #fff;
+  border: #fff;
+  border-radius: 10px;
+
+}
+
+.registrering-link {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .registrering-link a {
+    color: blue; /* Farge på lenketeksten */
+    text-decoration: underline; /* Understreking av lenketeksten */
+  }
+
+  .registrering-link a:hover {
+    color: darkblue; /* Fargeendring ved hover */
+}
