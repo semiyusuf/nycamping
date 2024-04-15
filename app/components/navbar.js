@@ -11,7 +11,7 @@ export default function Header() {
           <Link href="/">Hjem</Link>
           <Link href="/booking">Booking</Link>
           <Link href="/booking">Fasiliteter</Link>
-          <Link href="/aktiviteter">Aktiviteter</Link>
+          <Link href="#aktiviteter">Aktiviteter</Link>
           <Link href="#kontakt">Kontakt Oss</Link>
           <Link href="/logginn">Logg inn</Link>
         </nav>
