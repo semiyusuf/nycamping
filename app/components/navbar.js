@@ -9,7 +9,7 @@ export default function Header() {
         <nav className="navbar">
           <div id="nav-close" className="fas fa-times"></div>
           <Link href="/">Hjem</Link>
-          <Link href="/bOOking">Booking</Link>
+          <Link href="/booking">Booking</Link>
           <Link href="/booking">Fasiliteter</Link>
           <Link href="/aktiviteter">Aktiviteter</Link>
           <Link href="#kontakt">Kontakt Oss</Link>

@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Fasilitet {
+  fasilitetNr Int    @id @default(autoincrement())
+  navn        String
+  pris        Int
+
+  plasser Plass[]
+}
+
+model Plass {
+  plassNr       Int @id @default(autoincrement())
+  fasilitetNrId Int
+
+  fasilitet     Fasilitet     @relation(fields: [fasilitetNrId], references: [fasilitetNr])
+  reservasjoner Reservasjon[]
+}
+
+model Bruker {
+  brukerNr      Int           @id @default(autoincrement())
+  fornavn       String
+  etternavn     String
+  epost         String
+  telefon       String
+  passord       String
+  reservasjoner Reservasjon[]
+}
+
+model Sone {
+  soneNr        Int           @id @default(autoincrement())
+  sonenavn      String
+  reservasjoner Reservasjon[]
+}
+
+model Utleietjeneste {
+  utleieTjenesteNr Int    @id @default(autoincrement())
+  tjenestenavn     String
+  dagerTilgj       String
+  tilgjTid         String
+  pris             Int
+
+  reservasjonUtleietjeneste ReservasjonUtleietjeneste[]
+}
+
+model Reservasjon {
+  reservasjonNr Int    @id @default(autoincrement())
+  brukerNrId    Int
+  soneNrId      Int
+  plassNrId     Int
+  fraDato       String
+  tilDato       String
+
+  bruker Bruker @relation(fields: [brukerNrId], references: [brukerNr])
+  sone   Sone   @relation(fields: [soneNrId], references: [soneNr])
+  plass  Plass  @relation(fields: [plassNrId], references: [plassNr])
+
+  reservasjonUtleietjeneste ReservasjonUtleietjeneste[]
+}
+
+model ReservasjonUtleietjeneste {
+  antall           Int
+  utleieTjenesteNr Int
+  reservasjonNr    Int
+
+  utleietjeneste Utleietjeneste @relation(fields: [utleieTjenesteNr], references: [utleieTjenesteNr])
+  reservasjon    Reservasjon    @relation(fields: [reservasjonNr], references: [reservasjonNr])
+
+  @@unique([reservasjonNr, utleieTjenesteNr])
+}
