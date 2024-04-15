@@ -1,5 +1,5 @@
 "use client";
-import Validation from './signupValidation';
+//import Validation from './signupValidation';
 import React, { useState } from 'react'
 import '../logginn/logginn.css'; //for å gå ut av registrer mappen og inn i logginn mappen også inn logginn.css filen
 
@@ -85,7 +85,8 @@ export default function Registrer() {
     </div>
     <div className="inputbox">
     <label><strong>Passord</strong></label>
-        <input type="text" placeholder='Fyll inn passord' name='passord' onChange={handleInputPassord}  required/>
+    <input type="text" placeholder='Fyll inn passord' name='passord' onChange={handleInputPassord} required/>
+        
         
 
     </div>
