@@ -53,11 +53,7 @@ export async function POST(req, res) {
                 'Set-Cookie': serializedCookie
             }
         });
-    } catch (error) {
-        // Håndter feil, for eksempel problemer med databaseforbindelsen
-        console.error("Feil ved innlogging:", error);
-        return NextResponse.error(error.message, { status: 500 });
-    }
+    } catch (e) {}
 }
 
 // Sørg for at Prisma-klienten blir riktig frakoblet når serveren stenger ned
@@ -65,6 +61,12 @@ export async function tearDown() {
     await prisma.$disconnect();
 }
 
+
+ /*catch (error) {
+        // Håndter feil, for eksempel problemer med databaseforbindelsen
+        console.error("Feil ved innlogging:", error);
+        return NextResponse.error(error.message, { status: 500 });
+    }*/
 
 /* Generate refresh token
         const refreshToken = jwt.sign({ id: bruker.id, email: bruker.email }, process.env.REFRESH_TOKEN_SECRET);

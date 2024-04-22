@@ -23,11 +23,11 @@ export async function POST(request) {
 
         // Return the result as a JSON response
         return NextResponse.json({ result });
-    } catch (error) {
+    } /*catch (error) {
         // Handle errors, such as database connection issues
         console.error("Error creating bruker:", error);
         return NextResponse.error(error.message, { status: 500 });
-    }
+    }*/
 }
 
 // Ensure Prisma client is properly disconnected when the server shuts down

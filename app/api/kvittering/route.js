@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+/*import { NextResponse } from "next/server";
 import { PrismaClient } from "@/prisma/generated/client";
 
 // Initialize Prisma client
@@ -38,4 +38,4 @@ export async function GET(request) {
 // Sørg for at Prisma-klienten blir riktig frakoblet når serveren stenger ned
 export async function tearDown() {
     await prisma.$disconnect();
-}
+}*/
