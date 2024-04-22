@@ -40,7 +40,7 @@ export default function Kvittering (){
     <><div>
           <h1>Kvittering</h1>
           {kvittering ? (
-              <pre>{kvittering}</pre>
+              <p>{kvittering}</p>
           ) : (
               <p>{feilmelding || 'Laster...'}</p>
           )}
