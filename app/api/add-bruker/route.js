@@ -23,11 +23,7 @@ export async function POST(request) {
 
         // Return the result as a JSON response
         return NextResponse.json({ result });
-    } /*catch (error) {
-        // Handle errors, such as database connection issues
-        console.error("Error creating bruker:", error);
-        return NextResponse.error(error.message, { status: 500 });
-    }*/
+    } catch(e) {}
 }
 
 // Ensure Prisma client is properly disconnected when the server shuts down
@@ -35,7 +31,11 @@ export async function tearDown() {
     await prisma.$disconnect();
 }
 
-
+/*catch (error) {
+        // Handle errors, such as database connection issues
+        console.error("Error creating bruker:", error);
+        return NextResponse.error(error.message, { status: 500 });
+    }*/
 
 /*import { NextResponse } from "next/server";
 import { PrismaClient } from "@/prisma/generated/client";
