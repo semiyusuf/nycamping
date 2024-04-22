@@ -1,4 +1,4 @@
-"use client"
+/*"use client"
 import { useEffect, useState } from 'react';
 import React from 'react';
 import './style.css'; // Import your CSS file
@@ -119,4 +119,4 @@ export default function Kvittering (){
     </div>
     </>
       );
-}
+    }*/
