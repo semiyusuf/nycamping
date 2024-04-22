@@ -1,7 +1,7 @@
 
 //import { fetchData } from './utilFunc/api';
 //import { gAT } from '../api/logginn-bruker/route';
-//import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import { serialize } from 'cookie';
 import {NextResponse} from "next/server"
 import React from 'react';

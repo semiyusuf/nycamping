@@ -2,7 +2,7 @@
 import './bruker.css'
 import { getPosts } from '../api/get-bruker/route'
 //import { middleware } from '../api/cookieVerdi/route'
-import { getUserEmail } from '../../utils';
+//import { getUserEmail } from '../../utils';
 //import middleware from '../../middleware';
 
 
