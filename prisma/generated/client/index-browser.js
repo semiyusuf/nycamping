@@ -158,7 +158,8 @@ exports.Prisma.ReservasjonScalarFieldEnum = {
   soneNrId: 'soneNrId',
   plassNrId: 'plassNrId',
   fraDato: 'fraDato',
-  tilDato: 'tilDato'
+  tilDato: 'tilDato',
+  pris: 'pris'
 };
 
 exports.Prisma.ReservasjonUtleietjenesteScalarFieldEnum = {

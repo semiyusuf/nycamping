@@ -1,0 +1,90 @@
+.sidebar {
+  background-color: grey;
+  height: 600px;
+}
+
+.card-body {
+  margin-top: 3rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.block {
+  display: block;
+  margin-top: 1rem;
+}
+
+.content {
+  margin: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.text-secondary {
+  color: #6B7280;
+}
+
+.m-3 {
+  margin: 1rem;
+}
+
+.pt-3 {
+  padding-top: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.rounded-circle {
+  border-radius: 50%; /* Make it circular */
+  width: 100px; /* Adjust the width to your desired size */
+  height: 100px; /* Maintain aspect ratio */
+}
+
+
+.w-40 {
+  width: 10rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.border-gray-200 {
+  border-color: #E5E7EB;
+}

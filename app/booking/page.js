@@ -2,13 +2,18 @@
 "use client"
 import React, { useState } from 'react';
 import './styleF.css'; // Import your CSS file here
+//import { authMW } from '../utils/authMiddleware';
 //import axios from 'axios';
+
+/* Apply authMiddleware to ensure authentication check on each page request
+export async function getServerSideProps(ctx) {
+  return authMW(ctx);
+}*/
 
 export default function Booking() {
 
   return (
     <>
-    <div className="bookingPlassLager" ></div>
         <div className="header__image__container">
           <div className="header__content">
             <h1>Nyt sesongene i moderne fasiliteter</h1>
