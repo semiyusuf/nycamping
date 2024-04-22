@@ -1,8 +1,8 @@
-import {NextResponse} from "next/server"
+/*import {NextResponse} from "next/server"
 //import { parse } from 'cookie';
 
 //const jwt = require('jsonwebtoken');
-//let decodedToken = ''/*request, response*/
+//let decodedToken = ''/*request, response*
 
 export async function middleware(request) {
     //const cookie = request.cookies
