@@ -6393,7 +6393,6 @@ export namespace Prisma {
     brukerNrId: number | null
     soneNrId: number | null
     plassNrId: number | null
-    pris: number | null
   }
 
   export type ReservasjonSumAggregateOutputType = {
@@ -6401,7 +6400,6 @@ export namespace Prisma {
     brukerNrId: number | null
     soneNrId: number | null
     plassNrId: number | null
-    pris: number | null
   }
 
   export type ReservasjonMinAggregateOutputType = {
@@ -6411,7 +6409,6 @@ export namespace Prisma {
     plassNrId: number | null
     fraDato: string | null
     tilDato: string | null
-    pris: number | null
   }
 
   export type ReservasjonMaxAggregateOutputType = {
@@ -6421,7 +6418,6 @@ export namespace Prisma {
     plassNrId: number | null
     fraDato: string | null
     tilDato: string | null
-    pris: number | null
   }
 
   export type ReservasjonCountAggregateOutputType = {
@@ -6431,7 +6427,6 @@ export namespace Prisma {
     plassNrId: number
     fraDato: number
     tilDato: number
-    pris: number
     _all: number
   }
 
@@ -6441,7 +6436,6 @@ export namespace Prisma {
     brukerNrId?: true
     soneNrId?: true
     plassNrId?: true
-    pris?: true
   }
 
   export type ReservasjonSumAggregateInputType = {
@@ -6449,7 +6443,6 @@ export namespace Prisma {
     brukerNrId?: true
     soneNrId?: true
     plassNrId?: true
-    pris?: true
   }
 
   export type ReservasjonMinAggregateInputType = {
@@ -6459,7 +6452,6 @@ export namespace Prisma {
     plassNrId?: true
     fraDato?: true
     tilDato?: true
-    pris?: true
   }
 
   export type ReservasjonMaxAggregateInputType = {
@@ -6469,7 +6461,6 @@ export namespace Prisma {
     plassNrId?: true
     fraDato?: true
     tilDato?: true
-    pris?: true
   }
 
   export type ReservasjonCountAggregateInputType = {
@@ -6479,7 +6470,6 @@ export namespace Prisma {
     plassNrId?: true
     fraDato?: true
     tilDato?: true
-    pris?: true
     _all?: true
   }
 
@@ -6576,7 +6566,6 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
     _count: ReservasjonCountAggregateOutputType | null
     _avg: ReservasjonAvgAggregateOutputType | null
     _sum: ReservasjonSumAggregateOutputType | null
@@ -6605,7 +6594,6 @@ export namespace Prisma {
     plassNrId?: boolean
     fraDato?: boolean
     tilDato?: boolean
-    pris?: boolean
     bruker?: boolean | BrukerDefaultArgs<ExtArgs>
     sone?: boolean | SoneDefaultArgs<ExtArgs>
     plass?: boolean | PlassDefaultArgs<ExtArgs>
@@ -6620,7 +6608,6 @@ export namespace Prisma {
     plassNrId?: boolean
     fraDato?: boolean
     tilDato?: boolean
-    pris?: boolean
   }
 
   export type ReservasjonInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -6647,7 +6634,6 @@ export namespace Prisma {
       plassNrId: number
       fraDato: string
       tilDato: string
-      pris: number
     }, ExtArgs["result"]["reservasjon"]>
     composites: {}
   }
@@ -7055,7 +7041,6 @@ export namespace Prisma {
     readonly plassNrId: FieldRef<"Reservasjon", 'Int'>
     readonly fraDato: FieldRef<"Reservasjon", 'String'>
     readonly tilDato: FieldRef<"Reservasjon", 'String'>
-    readonly pris: FieldRef<"Reservasjon", 'Int'>
   }
     
 
@@ -8415,8 +8400,7 @@ export namespace Prisma {
     soneNrId: 'soneNrId',
     plassNrId: 'plassNrId',
     fraDato: 'fraDato',
-    tilDato: 'tilDato',
-    pris: 'pris'
+    tilDato: 'tilDato'
   };
 
   export type ReservasjonScalarFieldEnum = (typeof ReservasjonScalarFieldEnum)[keyof typeof ReservasjonScalarFieldEnum]
@@ -8760,7 +8744,6 @@ export namespace Prisma {
     plassNrId?: IntFilter<"Reservasjon"> | number
     fraDato?: StringFilter<"Reservasjon"> | string
     tilDato?: StringFilter<"Reservasjon"> | string
-    pris?: IntFilter<"Reservasjon"> | number
     bruker?: XOR<BrukerRelationFilter, BrukerWhereInput>
     sone?: XOR<SoneRelationFilter, SoneWhereInput>
     plass?: XOR<PlassRelationFilter, PlassWhereInput>
@@ -8774,7 +8757,6 @@ export namespace Prisma {
     plassNrId?: SortOrder
     fraDato?: SortOrder
     tilDato?: SortOrder
-    pris?: SortOrder
     bruker?: BrukerOrderByWithRelationInput
     sone?: SoneOrderByWithRelationInput
     plass?: PlassOrderByWithRelationInput
@@ -8791,7 +8773,6 @@ export namespace Prisma {
     plassNrId?: IntFilter<"Reservasjon"> | number
     fraDato?: StringFilter<"Reservasjon"> | string
     tilDato?: StringFilter<"Reservasjon"> | string
-    pris?: IntFilter<"Reservasjon"> | number
     bruker?: XOR<BrukerRelationFilter, BrukerWhereInput>
     sone?: XOR<SoneRelationFilter, SoneWhereInput>
     plass?: XOR<PlassRelationFilter, PlassWhereInput>
@@ -8805,7 +8786,6 @@ export namespace Prisma {
     plassNrId?: SortOrder
     fraDato?: SortOrder
     tilDato?: SortOrder
-    pris?: SortOrder
     _count?: ReservasjonCountOrderByAggregateInput
     _avg?: ReservasjonAvgOrderByAggregateInput
     _max?: ReservasjonMaxOrderByAggregateInput
@@ -8823,7 +8803,6 @@ export namespace Prisma {
     plassNrId?: IntWithAggregatesFilter<"Reservasjon"> | number
     fraDato?: StringWithAggregatesFilter<"Reservasjon"> | string
     tilDato?: StringWithAggregatesFilter<"Reservasjon"> | string
-    pris?: IntWithAggregatesFilter<"Reservasjon"> | number
   }
 
   export type ReservasjonUtleietjenesteWhereInput = {
@@ -9116,7 +9095,6 @@ export namespace Prisma {
   export type ReservasjonCreateInput = {
     fraDato: string
     tilDato: string
-    pris: number
     bruker: BrukerCreateNestedOneWithoutReservasjonerInput
     sone: SoneCreateNestedOneWithoutReservasjonerInput
     plass: PlassCreateNestedOneWithoutReservasjonerInput
@@ -9130,14 +9108,12 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedCreateNestedManyWithoutReservasjonInput
   }
 
   export type ReservasjonUpdateInput = {
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     bruker?: BrukerUpdateOneRequiredWithoutReservasjonerNestedInput
     sone?: SoneUpdateOneRequiredWithoutReservasjonerNestedInput
     plass?: PlassUpdateOneRequiredWithoutReservasjonerNestedInput
@@ -9151,7 +9127,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedUpdateManyWithoutReservasjonNestedInput
   }
 
@@ -9162,13 +9137,11 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
   }
 
   export type ReservasjonUpdateManyMutationInput = {
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservasjonUncheckedUpdateManyInput = {
@@ -9178,7 +9151,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservasjonUtleietjenesteCreateInput = {
@@ -9483,7 +9455,6 @@ export namespace Prisma {
     plassNrId?: SortOrder
     fraDato?: SortOrder
     tilDato?: SortOrder
-    pris?: SortOrder
   }
 
   export type ReservasjonAvgOrderByAggregateInput = {
@@ -9491,7 +9462,6 @@ export namespace Prisma {
     brukerNrId?: SortOrder
     soneNrId?: SortOrder
     plassNrId?: SortOrder
-    pris?: SortOrder
   }
 
   export type ReservasjonMaxOrderByAggregateInput = {
@@ -9501,7 +9471,6 @@ export namespace Prisma {
     plassNrId?: SortOrder
     fraDato?: SortOrder
     tilDato?: SortOrder
-    pris?: SortOrder
   }
 
   export type ReservasjonMinOrderByAggregateInput = {
@@ -9511,7 +9480,6 @@ export namespace Prisma {
     plassNrId?: SortOrder
     fraDato?: SortOrder
     tilDato?: SortOrder
-    pris?: SortOrder
   }
 
   export type ReservasjonSumOrderByAggregateInput = {
@@ -9519,7 +9487,6 @@ export namespace Prisma {
     brukerNrId?: SortOrder
     soneNrId?: SortOrder
     plassNrId?: SortOrder
-    pris?: SortOrder
   }
 
   export type UtleietjenesteRelationFilter = {
@@ -10046,7 +10013,6 @@ export namespace Prisma {
   export type ReservasjonCreateWithoutPlassInput = {
     fraDato: string
     tilDato: string
-    pris: number
     bruker: BrukerCreateNestedOneWithoutReservasjonerInput
     sone: SoneCreateNestedOneWithoutReservasjonerInput
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteCreateNestedManyWithoutReservasjonInput
@@ -10058,7 +10024,6 @@ export namespace Prisma {
     soneNrId: number
     fraDato: string
     tilDato: string
-    pris: number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedCreateNestedManyWithoutReservasjonInput
   }
 
@@ -10120,13 +10085,11 @@ export namespace Prisma {
     plassNrId?: IntFilter<"Reservasjon"> | number
     fraDato?: StringFilter<"Reservasjon"> | string
     tilDato?: StringFilter<"Reservasjon"> | string
-    pris?: IntFilter<"Reservasjon"> | number
   }
 
   export type ReservasjonCreateWithoutBrukerInput = {
     fraDato: string
     tilDato: string
-    pris: number
     sone: SoneCreateNestedOneWithoutReservasjonerInput
     plass: PlassCreateNestedOneWithoutReservasjonerInput
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteCreateNestedManyWithoutReservasjonInput
@@ -10138,7 +10101,6 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedCreateNestedManyWithoutReservasjonInput
   }
 
@@ -10171,7 +10133,6 @@ export namespace Prisma {
   export type ReservasjonCreateWithoutSoneInput = {
     fraDato: string
     tilDato: string
-    pris: number
     bruker: BrukerCreateNestedOneWithoutReservasjonerInput
     plass: PlassCreateNestedOneWithoutReservasjonerInput
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteCreateNestedManyWithoutReservasjonInput
@@ -10183,7 +10144,6 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedCreateNestedManyWithoutReservasjonInput
   }
 
@@ -10435,7 +10395,6 @@ export namespace Prisma {
   export type ReservasjonCreateWithoutReservasjonUtleietjenesteInput = {
     fraDato: string
     tilDato: string
-    pris: number
     bruker: BrukerCreateNestedOneWithoutReservasjonerInput
     sone: SoneCreateNestedOneWithoutReservasjonerInput
     plass: PlassCreateNestedOneWithoutReservasjonerInput
@@ -10448,7 +10407,6 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
   }
 
   export type ReservasjonCreateOrConnectWithoutReservasjonUtleietjenesteInput = {
@@ -10496,7 +10454,6 @@ export namespace Prisma {
   export type ReservasjonUpdateWithoutReservasjonUtleietjenesteInput = {
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     bruker?: BrukerUpdateOneRequiredWithoutReservasjonerNestedInput
     sone?: SoneUpdateOneRequiredWithoutReservasjonerNestedInput
     plass?: PlassUpdateOneRequiredWithoutReservasjonerNestedInput
@@ -10509,7 +10466,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
   }
 
   export type PlassCreateManyFasilitetInput = {
@@ -10535,13 +10491,11 @@ export namespace Prisma {
     soneNrId: number
     fraDato: string
     tilDato: string
-    pris: number
   }
 
   export type ReservasjonUpdateWithoutPlassInput = {
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     bruker?: BrukerUpdateOneRequiredWithoutReservasjonerNestedInput
     sone?: SoneUpdateOneRequiredWithoutReservasjonerNestedInput
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUpdateManyWithoutReservasjonNestedInput
@@ -10553,7 +10507,6 @@ export namespace Prisma {
     soneNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedUpdateManyWithoutReservasjonNestedInput
   }
 
@@ -10563,7 +10516,6 @@ export namespace Prisma {
     soneNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservasjonCreateManyBrukerInput = {
@@ -10572,13 +10524,11 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
   }
 
   export type ReservasjonUpdateWithoutBrukerInput = {
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     sone?: SoneUpdateOneRequiredWithoutReservasjonerNestedInput
     plass?: PlassUpdateOneRequiredWithoutReservasjonerNestedInput
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUpdateManyWithoutReservasjonNestedInput
@@ -10590,7 +10540,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedUpdateManyWithoutReservasjonNestedInput
   }
 
@@ -10600,7 +10549,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservasjonCreateManySoneInput = {
@@ -10609,13 +10557,11 @@ export namespace Prisma {
     plassNrId: number
     fraDato: string
     tilDato: string
-    pris: number
   }
 
   export type ReservasjonUpdateWithoutSoneInput = {
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     bruker?: BrukerUpdateOneRequiredWithoutReservasjonerNestedInput
     plass?: PlassUpdateOneRequiredWithoutReservasjonerNestedInput
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUpdateManyWithoutReservasjonNestedInput
@@ -10627,7 +10573,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
     reservasjonUtleietjeneste?: ReservasjonUtleietjenesteUncheckedUpdateManyWithoutReservasjonNestedInput
   }
 
@@ -10637,7 +10582,6 @@ export namespace Prisma {
     plassNrId?: IntFieldUpdateOperationsInput | number
     fraDato?: StringFieldUpdateOperationsInput | string
     tilDato?: StringFieldUpdateOperationsInput | string
-    pris?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservasjonUtleietjenesteCreateManyUtleietjenesteInput = {

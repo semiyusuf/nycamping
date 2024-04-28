@@ -64,7 +64,6 @@ model Reservasjon {
   plassNrId     Int
   fraDato       String
   tilDato       String
-  pris          Int
 
   bruker Bruker @relation(fields: [brukerNrId], references: [brukerNr])
   sone   Sone   @relation(fields: [soneNrId], references: [soneNr])

@@ -1,6 +1,51 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+
+
+export default function Footer() {
+  return (
+    <section className="footer">
+      <div className="footer-box">
+        <h3>Meny</h3>
+        <Link href="#">Hjem</Link>
+        <Link href="#">Overnatting</Link>
+        <Link href="#">Fasiliteter</Link>
+        <Link href="#">Aktiviteter</Link>
+      </div>
+
+      <div className="footer-box">
+        <h3>Overnatting</h3>
+        <Link href="#">Hytter</Link>
+        <Link href="#">Campingplass</Link>
+      </div>
+
+      <div className="footer-box">
+        <h3>Hjelp</h3>
+        <Link href="#">Kontakt oss</Link>
+        <Link href="#">Bestill</Link>
+      </div>
+
+      <div className="footer-box">
+        <h3>Følg Oss</h3>
+        <Link href="#">Facebook</Link>
+        <Link href="#">Instagram</Link>
+        <Link href="#">Tiktok</Link>
+        <div className="sosial">
+        
+       
+        <Link href="#"><i className="ri-instagram-fill"></i></Link>
+        <Link href="#"><i className="ri-facebook-fill"></i></Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/*import React from 'react';
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <section className="footer">
@@ -37,7 +82,7 @@ export default function Footer() {
 
   );
 };
-
+*/
 
 /*import React from 'react';
 import Link from 'next/link';

@@ -13,7 +13,7 @@
 
 .navbarDiv {
         overflow: hidden;
-        background-color: #fff ;
+        background-color: white ;
         position: fixed;
         top: 0;
         width: 100%;
@@ -108,6 +108,659 @@ html{
         }
     }
 
+    .menu-btn{
+        display: none;
+    } 
+
+    
+}
+
+
+
+
+/******************* CSS kode for forsidem **************************/
+section {
+    padding: 17px 17% 60px;
+}
+
+.home {
+    background-image: url('/Bilde/slideshow2.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-text {
+    position: absolute;
+    bottom: 12rem;
+    left: 8rem;
+}
+
+
+.home-text H5 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: white;
+}
+
+.home-text h1 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: white;
+
+}
+
+.home-text p{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 10px;
+    color: white;
+  
+}
+
+
+.home_knapp{
+    display: inline-block;
+    padding: 13px 40px;
+    background: #ffa343;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .50s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.home_knapp:hover, .home-text h1, .home-text h5, .home-text p {
+    transform: translateY(4px);;
+}
+
+
+
+
+.h1 {
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 80% 5%;
+    margin-right: .5%;
+}
+
+.packages {
+    background: white;
+}    
+
+.navn {
+    font-size: 5rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+    
+.box-container {
+        grid: 32rem;
+        justify-content: space-between;    
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamisk justering av kolonnebredde */
+    gap: 2rem; /* Legg til litt mellomrom mellom boksene */
+}
+    
+.box{
+    text-align: center;
+    background: white;
+    border: .2rem solid #10221b;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    
+}   
+
+.box:hover{
+    background: grey;
+}
+ 
+.content > * {
+    color: black;
+}   
+    
+.btn {
+    display: inline-block;
+    padding: 2px 60px;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 15px;
+    font-weight: 400;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .50s ease;
+    cursor: pointer;
+
+}
+    
+.btn:hover {
+        background: orange;
+        color:white;
+}   
+        
+.image{
+    height: 25rem;
+    overflow: hidden;
+    padding: 2rem;
+    padding-bottom: 0;
+    border-radius: .5rem;
+}
+    
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+    
+.content {
+    padding: 2rem;
+}
+
+h3{
+    font-size: 2rem;
+    color: orange;
+}
+    
+p{
+    font-size: 1rem;
+    color: black;
+    padding: 1rem 0;
+    line-height: 1;
+}
+    
+
+
+.about_camping {
+    display: flex;
+    justify-content: space-between; /* Plasserer elementene i containeren med lik avstand mellom dem */
+}
+
+.image_about {
+    margin-right: 1rem;
+    width: 70%;
+}
+
+.h3 {
+    font-size: 2rem;
+    color: green;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: black;
+    padding: 1rem;
+    line-height: 2;
+    margin-top: 0;
+}
+
+/* map */
+.map {
+    background-image: url('/BilderB/ferdigmape.png');
+    height: 100vh;
+    width: 75%;
+    background-size: contain; /* Endret fra cover til contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map_box {
+    height: 91%;
+    padding: 50px;
+    margin-left: 180%;
+    border: 15px solid black;
+}
+
+.map_button {
+    padding: 20px 30px; /* Juster padding etter behov */
+    margin-bottom: 15px; /* Legg til margin mellom knappene */
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    
+}
+
+
+.map_button2 {
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.map_button3 {
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.map_button4 {
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.map_button:hover, .map_button2:hover, .map_button3:hover, .map_button4:hover{
+    background-color: grey;
+}
+
+.map_button:active, .map_button2:active, .map_button3:active, .map_button4:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);;
+}
+/******************************************************************************************************/
+
+
+
+
+
+
+
+
+/***** Footer **/
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 2rem;
+    background-color: #fff;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.footer-box h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+.footer-box a{
+    color: #979797;
+    margin-bottom: 0.8rem;
+    transition: all .50s ease;
+}
+.footer-box a:hover{
+    transform: translateX(-5px);
+    color: var(--main-color);
+}
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #000;
+    color: var(--text-color);
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: transform 0.6s;
+}
+.social a:hover{
+    background: var(--main-color);
+    color:var(--bg-color);
+    transform: translateX(-4px);
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************** Responsiv **********************************************/
+@media(max-width:1200px){
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 3rem 2rem;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    }
+
+   
+     
+}
+
+@media(max-width:991px){
+   html{
+    font-size: 55%;
+   } 
+
+   .home .box{
+    justify-content: center;
+    background-position: left !important;
+
+    &.second{
+        justify-content: center;
+        background-position: left !important;
+    }
+
+    .content{
+        text-align: center;
+
+        span{
+            font-size: 3rem;
+        }
+        h3{
+            font-size: 4rem;
+        }
+    }
+
+   }
+
+   .footer {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+
+    .image_about {
+        width: 100%; /* Bildet tar nå full bredde på mindre skjermer */
+        margin-right: 0; /* Fjerner høyre marg på mindre skjermer */
+    }
+    
+    .about_camping {
+        flex-direction: column; /* Endrer retning til kolonne for å stabelisere elementene på mindre skjermer */
+        align-items: flex-start; /* Justerer elementene til starten av kolonnen */
+    }
+    
+    .h3 {
+        font-size: 1.5rem; /* Reduserer skriftstørrelsen for overskriften på mindre skjermer */
+    }
+    
+    p {
+        font-size: 1rem; /* Reduserer skriftstørrelsen for avsnittene på mindre skjermer */
+    }
+}
+
+@media(max-width:768px) {
+    .header{
+        .menu-btn{
+            display: inline-block;
+        }
+
+        .navbar{
+            position: fixed;
+            top: 0; left: -110%;
+            background: gray;
+            z-index: 10000;
+            width: 35rem;
+            height: 100%;  
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            &.active{
+                left: 0;
+                box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+            }
+
+            a{
+                margin: 1rem 0;
+                font-size: 3rem;
+            }
+
+            #nav-close{
+                display: block;
+                position: absolute;
+                top: 1rem; right: 2rem;
+            }
+        }
+    }
+
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    }
+    .footer-box h3 {
+        font-size: 16px;
+    }
+
+    .image_about {
+        width: 100%; /* Bildet tar nå full bredde på mindre skjermer */
+        margin-right: 0; /* Fjerner høyre marg på mindre skjermer */
+    }
+    
+    .about_camping {
+        flex-direction: column; /* Endrer retning til kolonne for å stabelisere elementene på mindre skjermer */
+        align-items: flex-start; /* Justerer elementene til starten av kolonnen */
+    }
+    
+    .h3 {
+        font-size: 1.5rem; /* Reduserer skriftstørrelsen for overskriften på mindre skjermer */
+    }
+    
+    p {
+        font-size: 1rem; /* Reduserer skriftstørrelsen for avsnittene på mindre skjermer */
+    }
+
+    .map {
+        width: 90%;
+        
+    }
+
+    .map_box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .map_button,
+    .map_button2,
+    .map_button3,
+    .map_button4 {
+        margin-bottom: 10px; /* Knappene tar nå full bredde på mindre skjermer */
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+   
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(60px, auto));
+    }
+    .footer-box h3 {
+        font-size: 14px;
+    }
+
+   
+}
+/*fonts.googleapis.com*/
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+:root {
+    --primary-color: #2c3855;
+    --primary-color-dark: #435681;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+
+
+.navbarDiv {
+        overflow: hidden;
+        background-color: #fff ;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: white;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: black;
+    }
+}
+
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 2rem 9%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    
+
+    .logo {
+        margin-right: auto;
+        font-size: 2.5rem;
+        color: black;
+        font-weight: bolder;
+
+        i{
+        color: green;
+        }
+    }
+  
+    .navbar{
+        a{
+            margin-left: 2rem;
+            font-size: 1.7rem;
+            line-height: .5;
+            color: black;
+
+            &:hover{
+            color: green;
+             }
+        }
+
+        #nav-close{
+            font-size: 5rem;
+            cursor: pointer;
+            color: black;
+            display: none;
+        }
+    }  
+    
+    .icons a, .icons div{
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        cursor: pointer;
+        color: white;
+
+        &:hover{
+            transform: translateX(5px);
+            color: green;
+        }
+    }
+
     #menu-btn{
         display: none;
     } 
@@ -116,7 +769,7 @@ html{
 
 
 
-/******************* CSS kode for forsidem **************************/
+/******************* CSS kode for forsidem **************************
 section {
     padding: 17px 17% 60px;
 }
@@ -214,8 +867,8 @@ section {
 
 .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamisk justering av kolonnebredde */
-    gap: 2rem; /* Legg til litt mellomrom mellom boksene */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamisk justering av kolonnebredde *
+    gap: 2rem; /* Legg til litt mellomrom mellom boksene *
 }
     
 .box{
@@ -295,7 +948,7 @@ p{
 
 .about_camping {
     display: flex;
-    justify-content: space-between; /* Plasserer elementene i containeren med lik avstand mellom dem */
+    justify-content: space-between; /* Plasserer elementene i containeren med lik avstand mellom dem *
 }
 
 .image_about {
@@ -321,7 +974,7 @@ p {
     background-image: url('/BilderB/ferdigmape.png');
     height: 100vh;
     width: 75%;
-    background-size: contain; /* Endret fra cover til contain */
+    background-size: contain; /* Endret fra cover til contain *
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -337,8 +990,8 @@ p {
 }
 
 .map_button {
-    padding: 20px 30px; /* Juster padding etter behov */
-    margin-bottom: 15px; /* Legg til margin mellom knappene */
+    padding: 20px 30px; /* Juster padding etter behov *
+    margin-bottom: 15px; /* Legg til margin mellom knappene *
     font-size: 14px;
     text-align: center;
     cursor: pointer;
@@ -548,7 +1201,7 @@ p {
 
 
 
-/****************************************** Responsiv **********************************************/
+/****************************************** Responsiv **********************************************
 @media(max-width:1200px){
     .header{
         padding: 2rem;
@@ -621,7 +1274,7 @@ p {
     .sb_footer-below-links p {
         margin-left: 0rem;
         margin-top: 1rem;
-    }*/
+    }*
 
 
 }
@@ -672,4 +1325,4 @@ p {
         font-size: 27px;
         line-height: 38px;
     }
-}
+}*/

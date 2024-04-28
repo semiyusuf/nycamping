@@ -1,26 +1,28 @@
-/*import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { PrismaClient } from "@/prisma/generated/client";
 
 // Initialize Prisma client
 const prisma = new PrismaClient();
 
-export async function GET(request) {
+export async function GET() {
     try {
-        // Hent reservasjonsdetaljer basert på brukerens ID
+        // Finn den siste reservasjonen opprettet
         const reservasjon = await prisma.reservasjon.findFirst({
-            where: {
-                brukerNrId: 2, // Endre brukerNrId til 2
+            orderBy: {
+                reservasjonNr: 'desc' 
             },
-            include: {
-                bruker: true,
-                sone: true,
+            select: {
+                fraDato: true,
+                tilDato: true,
+                bruker: { select: { fornavn: true, etternavn: true } },
+                sone: { select: { sonenavn: true } },
                 plass: {
-                    include: {
-                        fasilitet: true,
+                    include: { 
+                        fasilitet: { select: { navn: true } },
                     },
                 },
             },
-        });
+        });;
 
         if (!reservasjon) {
             return NextResponse.error("Ingen reservasjon funnet for brukerNrId 2", { status: 404 });
@@ -38,4 +40,4 @@ export async function GET(request) {
 // Sørg for at Prisma-klienten blir riktig frakoblet når serveren stenger ned
 export async function tearDown() {
     await prisma.$disconnect();
-}*/
+}

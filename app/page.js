@@ -60,18 +60,6 @@ export default function Home() {
           <a href="#" className = "btn"> Les Mer Her </a> 
         </div> 
       </div>
-
-      <div className = "box">
-          <div className = "image">
-            <img src = "Bilde/background.jpg" alt = ""/>
-          </div>
-        <div className = "content">
-          <h3> Butikk og Kafe  </h3>
-          <p> I Resepsjonen Får Du Svar På Det Meste</p>
-          <div className = "price"> </div>
-          <a href="#" className = "btn"> Les Mer Her </a> 
-        </div> 
-      </div>
       </div>
   </section>
 
