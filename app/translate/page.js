@@ -1,0 +1,44 @@
+'use client';
+import React, { useEffect } from "react";
+import './translate.css';
+
+export default function Translate() {
+  useEffect(() => {
+    // Funksjon for å legge til Google Translate-skriptet
+    function initializeGoogleTranslate() {
+      // Definerer funksjonen som initialiserer Google Translate
+      window.googleTranslateElementInit = function () {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: 'en' },
+          'google_translate_element'
+        );
+      };
+
+      // Legger til skriptelementet for Google Translate API
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+
+    initializeGoogleTranslate();
+
+    // Rens opp når komponenten blir avmontert
+    return () => {
+      //const script = document.querySelector('script[src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"]');
+      //if (script) {
+
+        //document.head.removeChild(script);
+      //}
+    };
+  }, []);
+  
+  return (
+    <>
+    <div className="as"></div>
+    <div id="google_translate_element"></div>
+    </>
+    
+  )
+}

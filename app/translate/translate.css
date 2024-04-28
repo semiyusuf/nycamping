@@ -1,0 +1,13 @@
+
+.lp {
+    width: 100%;
+    height: 500px;
+}
+
+.google_translate_element {
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    background-color: black;
+
+}

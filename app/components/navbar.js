@@ -12,8 +12,7 @@ export default function Header() {
           <div id="nav-close" className="fas fa-times"></div>
           <Link href="/">Home</Link>
           <Link href="/booking">Booking</Link>
-          <Link href="/bruker">Fasiliteter</Link>
-          <Link href="/aktiviteter">Aktiviteter</Link>
+          <Link href="/aktivitet">Aktiviteter</Link>
           <Link href="/kontakt">Kontakt Oss</Link>
           <Link href="/logginn">Logg inn</Link>
         </nav>
@@ -28,8 +27,11 @@ export default function Header() {
 
 
 
-/*import Link from "next/link";
+/*
+<Link href="/aktiviteter">Aktiviteter</Link>
+import Link from "next/link";
 import React from 'react';
+<Link href="/bruker">Fasiliteter</Link>
 
 export default function Header() {
   return (

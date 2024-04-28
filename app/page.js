@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
-
+import Link from "next/link";
+//import React, { useEffect } from "react";
 
 
 export default function Home() {
+ 
   return (
     <>
       
@@ -80,10 +82,10 @@ export default function Home() {
   {/* Map */}
   <section className="map">
     <div className="map_box">
-      <button className="map_button">Click Me</button>
-      <button className="map_button2">Click Me</button>
-      <button className="map_button3">Click Me</button>
-      <button className="map_button4">Click Me</button>
+      <Link href="/booking"><button className="map_button">Click Me</button></Link>
+      <Link href="/booking"><button className="map_button2">Click Me</button></Link>
+      <Link href="/booking"><button className="map_button3">Click Me</button></Link>
+      <Link href="/booking"><button className="map_button4">Click Me</button></Link>
     </div>
   </section>
 

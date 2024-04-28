@@ -1,15 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
-
-
-
+//import React from 'react';
+//import Translate from '../translate/page.js';
 
 export default function Footer() {
+ 
   return (
     <section className="footer">
       <div className="footer-box">
         <h3>Meny</h3>
-        <Link href="#">Hjem</Link>
+        <Link href="/">Hjem</Link>
         <Link href="#">Overnatting</Link>
         <Link href="#">Fasiliteter</Link>
         <Link href="#">Aktiviteter</Link>
@@ -33,6 +32,8 @@ export default function Footer() {
         <Link href="#">Instagram</Link>
         <Link href="#">Tiktok</Link>
         <div className="sosial">
+          {/* Google Translate-diven */}
+         
         
        
         <Link href="#"><i className="ri-instagram-fill"></i></Link>
@@ -45,6 +46,9 @@ export default function Footer() {
 
 /*import React from 'react';
 import Link from 'next/link';
+
+ <Translate />
+          <div className="google_translate_element"></div>
 
 export default function Footer() {
   return (

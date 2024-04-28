@@ -1,50 +1,85 @@
-import React from "react";
-import prisma from '@/lib/prisma'
-import Brukere from './/components/Brukere'; // Adjust the path as per your file structure
-import styles from './page.module.css'
 
+'use client';
+import React, { useEffect } from "react";
 
+export default function Home() {
+  useEffect(() => {
+    // Funksjon for å legge til Google Translate-skriptet
+    function initializeGoogleTranslate() {
+      // Definerer funksjonen som initialiserer Google Translate
+      window.googleTranslateElementInit = function () {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: 'en' },
+          'google_translate_element'
+        );
+      };
 
-async function getBrukere() {
-  const bruker = await prisma.bruker.findMany( {
-    where: {brukerNr: 1},
-    /*include: {
-      fornavn: {
-        select: {etternavn: true}
+      // Legger til skriptelementet for Google Translate API
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+
+    initializeGoogleTranslate();
+
+    // Rens opp når komponenten blir avmontert
+    return () => {
+      const script = document.querySelector('script[src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"]');
+      if (script) {
+
+        document.head.removeChild(script);
       }
-    }*/
-  })
-  return bruker;
-}
+    };
+  }, []);
 
-
-export default async function () {
-  const bruken = await getBrukere();
-  console.log({bruken})
   return (
-    <main className={styles.main}>
-      <div className="lpHjemme">
-      <h1>VELKOMMEN</h1>
-      {
-    bruken.map((bruken) => {
-    return (
-      <Brukere
-      key={bruken.brukerNr}
-      id={bruken.brukerNr}
-      brukerNr={bruken.brukerNr}
-      etternavn={bruken.etternavn}
-      epost={bruken.epost}
-      telefon={bruken.telefon}
-      />
-    )
-  })
-}
-      </div>
-    </main>
+    <>
+      <div className="Hlp"></div>
+      <section className="home" id="home">
+        <div className="home-slider">
+          <div className="swiper-wrapper">
+            {/* Display only one image */}
+            <div className="swiper-slide">
+              <div className="box" style={{ background: 'url(/Bilde/slideshow2.jpg) no-repeat' }}>
+                <div className="content">
+                  <span> La oss!</span>
+                  <h3>Planlegge din reise sammen.</h3>
+                  <p>Uforsk, oppdrag og føl deg hjemme åpen himmel.</p>
+                  <a href="#" className="btn">Book din reise</a>
+                  {/* Google Translate-diven */}
+                  <div id="google_translate_element"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Swiper navigation buttons */}
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
+        </div>
+      </section>
 
-  
-  )
-}
+      <section className="category">
+        <h1 className="heading"> Sørlandsidyll, Aktiviteter og kvalitetstid</h1>
+        <div className="box-container">
+          {/* Rest of your HTML */}
+        </div>
+      </section>
 
-//import { PrismaClient } from './prisma/generated/client'
-//const prisma = new PrismaClient()
+      <section className="Omoss" id="Omoss">
+        <div className="image">
+          <img src="Bilde/camping.jpg" alt="" />
+        </div>
+        <div className="content">
+          <h3> Velkommen til Krs.Camping </h3>
+          <p>I flere generasjoner nå har Krs.camping vært en meget godt besøkt campingsplass. Menge ønsker å legge ferien sin til Sørlandet,
+            og det er jo noe vi setter stor pris på.Vi er også campingplassen nærmest Dyreparken, så det blir nesten en selvfølge å besøke Kaptein Sabeltall, dyrene og alle de kjente vennene vår i Kardemomme by og Hakkebekkeskogen.
+            Vi på Krs.camping ønsker lykke til med planleggingen av årests ferie.
+            Hjertelig velkommen til oss! </p>
+          <a href="#" className="btn2">Les mer her.</a>
+        </div>
+      </section>
+    </>
+  );
+}

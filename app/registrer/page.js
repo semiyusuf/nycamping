@@ -2,6 +2,7 @@
 //import Validation from './signupValidation';
 import React, { useState } from 'react'
 import '../logginn/logginn.css'; //for å gå ut av registrer mappen og inn i logginn mappen også inn logginn.css filen
+import { useRouter } from 'next/navigation'
 
 
 export default function Registrer() {
@@ -10,6 +11,7 @@ export default function Registrer() {
     const [epost, setEpost] = useState('');
     const [telefon, setTelefon] = useState('');
     const [passord, setPassord] = useState('');
+    const router = useRouter();
 
     const handleInputFornavn = (event) => {
         setFornavn(event.target.value);
@@ -31,24 +33,32 @@ export default function Registrer() {
         event.preventDefault();
 
         try {
-            await fetch('/api/add-bruker', {
+            const response = await fetch('/api/add-bruker', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({fornavn, etternavn, epost, telefon, passord})
+                body: JSON.stringify({ fornavn, etternavn, epost, telefon, passord })
+            });
 
-            })
-        }catch(error) {
-            console.error(error)
+            if (response.ok) {
+                router.push('/logginn');
+            } else {
+                // H책ndter feilrespons her
+                const data = await response.json();
+                // Sett feilmelding basert p책 svaret fra serveren
+            }
+        } catch (error) {
+            console.error(error);
+            // Sett feilmelding basert p책 feilen
         }
 
+        // Tilbakestill inputfeltene
         setFornavn('');
         setEtternavn('');
         setEpost('');
         setTelefon('');
         setPassord('');
-
     }
 
 

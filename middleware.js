@@ -28,7 +28,7 @@ export async function middleware(request) {
 }
 
 export const config = {
-    matcher: ['/bruker', '/booking', '/kontakt', '/aktiviteter']
+    matcher: ['/bruker', '/booking', '/kontakt', '/aktivitet']
 }
 
 /*export default async function cverdi(request) {
