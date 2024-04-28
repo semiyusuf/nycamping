@@ -46,6 +46,7 @@ export default function Kvittering (){
         )}
         {feilmelding && <p>{feilmelding}</p>}
       </div>
+      <div></div>
     </div>
   );
 };
