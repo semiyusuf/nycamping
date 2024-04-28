@@ -36,6 +36,7 @@ export default function Translate() {
   
   return (
     <>
+    <div></div>
     <div className="as"></div>
     <div id="google_translate_element"></div>
     </>
